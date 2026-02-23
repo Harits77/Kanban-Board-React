@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+@import "tailwindcss";
+
+:root {
+  /* Jira-like accent blue instead of purple */
+  --accent: #579dff;
+  --muted: #9ca3af;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial;
+}
+
+/* Professional dark background */
+body {
+  @apply bg-[#1D2125] text-gray-200;
+}
+
+/* Scrollbars — neutral instead of colorful */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar:horizontal {
+  height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #26162e;
+  border-radius: 999px;
+}
+
+.task > ::-webkit-scrollbar-thumb {
+  background-color: #373e47;
+  border-radius: 999px;
+}
+
+/* subtle focus outline (Jira style) */
+.focus-ring:focus {
+  outline: 2px solid rgba(87, 157, 255, 0.35);
+  outline-offset: 2px;
+}
